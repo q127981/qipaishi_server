@@ -1,0 +1,89 @@
+server:
+  port: 8900
+
+--- #################### 数据库相关配置 ####################
+spring:
+  # 数据源配置项
+  autoconfigure:
+    exclude:
+      - com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure # 排除 Druid 的自动配置，使用 dynamic-datasource-spring-boot-starter 配置多数据源
+      - org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration # 排除积木报表带来的 MongoDB 的自动配置
+  datasource:
+    druid: # Druid 【监控】相关的全局配置
+      web-stat-filter:
+        enabled: true
+      stat-view-servlet:
+        enabled: true
+        allow: # 设置白名单，不填则允许所有访问
+        url-pattern: /druid/*
+        login-username: # 控制台管理用户名和密码
+        login-password:
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true # 慢 SQL 记录
+          slow-sql-millis: 100
+          merge-sql: true
+        wall:
+          config:
+            multi-statement-allow: true
+    dynamic: # 多数据源配置
+      druid: # Druid 【连接池】相关的全局配置
+        initial-size: 5 # 初始连接数
+        min-idle: 10 # 最小连接池数量
+        max-active: 20 # 最大连接池数量
+        max-wait: 600000 # 配置获取连接等待超时的时间，单位：毫秒
+        time-between-eviction-runs-millis: 60000 # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位：毫秒
+        min-evictable-idle-time-millis: 300000 # 配置一个连接在池中最小生存的时间，单位：毫秒
+        max-evictable-idle-time-millis: 900000 # 配置一个连接在池中最大生存的时间，单位：毫秒
+        validation-query: SELECT 1 FROM DUAL # 配置检测连接是否有效
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+      primary: master
+      datasource:
+        #修改为自己创建的mysql信息 支持5.7或8.0
+        master:
+          url: jdbc:mysql://127.0.0.1:3306/mazongjian?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true # MySQL Connector/J 8.X 连接的示例
+          username: mazongjian
+          password: PeSnw4KTkSdR82ds
+
+  # Redis 配置
+  redis:
+    host: 127.0.0.1 # 地址
+    port: 6379 # 端口
+    database: 0 # 数据库索引
+    password: redisadmin # 密码，建议生产环境开启
+
+# 微信支付回调
+wx:
+  pay:
+    #支付回调通知地址
+    returnUrl: https://wq.scyanzu.com/app-api/callback/wxpay/update
+    ################################以下内容为微信支付服务商模式以及分账配置############################################
+    mchId:  #微信支付服务商的商户号
+    mchKey:  #微信支付服务商的v2密钥
+    # p12证书的位置，可以指定绝对路径，也可以指定类路径（以classpath:开头）
+    keyPath:  # 如果不是服务商模式，这里就不填
+    #开启分账功能 则需要填写接收分账的账户信息
+    splitMchId:  #接收分账的账户id 这里是开发环境  不需要分账 就不填
+    splitMchName:  #接收分账的账户名称  营业执照上的全称   这里是开发环境 不需要分账   就不填
+
+#美团北极星平台开发者配置
+meituan:
+  redirectUrl: xxx
+  appKey: xxxxxxxxxxxx
+  secret: xxxxxxxxxxxx
+
+#抖音开放平台开发者配置
+douyin:
+  redirectUrl: xxx
+  appKey: xxxxxxxxxxxx
+  secret: xxxxxxxxxxxx
+
+#硬件开发者配置
+iot:
+  clientId: xxxxxxx-xxxxxx
+  secret: xxxxxx-xxxxx-xxxxxxxxxxxx
+  redirectUrl: https://wq.scyanzu.com/app-api/callback/iotCallback
+
