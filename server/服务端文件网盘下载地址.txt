@@ -7,7 +7,7 @@ mazongjian-server.xjar文件太大了，请大家在网盘下载
 2024年5月12日 更新
 
 1.增加“插座”设备类型的选项
-注意需要在数据字典 “优惠券类型”中新增加时券的类型，值为3。或者执行文件夹内提供的update.sql
+注意需要在数据字典 “设备类型”中新增类型“插座”，值为7。或者执行文件夹内提供的update.sql
 也可以直接在数据库执行以下sql:
 INSERT INTO `system_dict_data` ( `sort`, `label`, `value`, `dict_type`, `status`, `color_type`, `css_class`, `remark`, `creator`, `create_time`, `updater`, `update_time`, `deleted`) VALUES ( 7, '插座', '7', 'member_device_type', 0, 'default', '', NULL, '1', '2024-05-12 19:23:38', '1', '2024-05-12 19:23:38', b'0');
 
