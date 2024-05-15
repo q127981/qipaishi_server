@@ -2,6 +2,26 @@ mazongjian-server.xjar文件太大了，请大家在网盘下载
 更新版本后会同步更新下载地址
 请大家关注本仓库的更新
 
+=========================================================================
+2024年5月15日 更新
+
+
+1.订单编辑增加修改房间
+2.房间控制增加代下单功能
+3.门店管理，增加“消费中门禁常开”的设置，默认开启   请注意需要执行文件夹内提供的update.sql
+也可以直接在数据库执行以下sql:
+ALTER TABLE `member_store_info` ADD COLUMN `order_door_open` bit(1) NULL DEFAULT b'1' COMMENT '订单门禁常开' AFTER `work_price`;
+4.订单管理，增加复制下单会员手机号
+
+
+阿里云盘：
+（Linux系统启动用的xjar文件请在百度云下载，阿里云无法分享）
+https://www.alipan.com/s/ZHUKWMP2fMc
+
+百度云盘：
+链接：https://pan.baidu.com/s/1OHEshA2_VPLFsCDxBUziaA?pwd=5sod
+提取码：5sod
+
 
 =========================================================================
 2024年5月12日 更新
