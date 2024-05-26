@@ -71,13 +71,13 @@ wx:
 
 #美团北极星平台开发者配置
 meituan:
-  redirectUrl: xxx
+  redirectUrl: https://wq.scyanzu.com/app-api/callback/meituan
   appKey: xxxxxxxxxxxx
   secret: xxxxxxxxxxxx
 
 #抖音开放平台开发者配置
 douyin:
-  redirectUrl: xxx
+  redirectUrl: https://wq.scyanzu.com/app-api/callback/douyin
   appKey: xxxxxxxxxxxx
   secret: xxxxxxxxxxxx
 
