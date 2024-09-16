@@ -87,4 +87,4 @@ iot:
   clientId: xxxxxxx-xxxxxx
   secret: xxxxxx-xxxxx-xxxxxxxxxxxx
   redirectUrl: https://wq.scyanzu.com/app-api/callback/iotCallback
-
+  groupPay: false
