@@ -340,43 +340,10 @@ SET expire_time = DATE_ADD(create_time, INTERVAL 1 YEAR)
 WHERE expire_time IS NULL AND create_time IS NOT NULL;
 
 
-CREATE TABLE `member_product_order`  (
-                                                 `order_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '订单ID',
-                                                 `order_no` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '订单号',
-                                                 `store_id` bigint NOT NULL COMMENT '门店id',
-                                                 `room_id` bigint NOT NULL COMMENT '房间id',
-                                                 `user_id` bigint UNSIGNED NOT NULL COMMENT '用户id',
-                                                 `user_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '用户姓名',
-                                                 `user_phone` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '用户手机号',
-                                                 `product_info` json NULL COMMENT '商品信息',
-                                                 `total_num` int UNSIGNED NULL DEFAULT 0 COMMENT '订单商品总数',
-                                                 `total_price` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '订单总价',
-                                                 `pay_price` int UNSIGNED NULL DEFAULT 0 COMMENT '实际支付金额',
-                                                 `pay_time` datetime NULL DEFAULT NULL COMMENT '支付时间',
-                                                 `status` tinyint(1) NOT NULL DEFAULT 0 COMMENT '订单状态(0:待支付,1:已支付,2:已完成,3:已经取消)',
-                                                 `pay_type` tinyint(1) NULL DEFAULT 1 COMMENT '支付方式 1微信 2余额 3团购',
-                                                 `mark` varchar(512) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '备注',
-                                                 `deleted` bit(1) NULL DEFAULT b'0' COMMENT '逻辑删除',
-                                                 `creator` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '创建者',
-                                                 `create_time` datetime NOT NULL COMMENT '添加时间',
-                                                 `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
-                                                 `updater` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '更新者',
-                                                 `tenant_id` bigint NULL DEFAULT NULL COMMENT '租户编号',
-                                                 PRIMARY KEY (`order_id`) USING BTREE,
-                                                 INDEX `store_id`(`store_id`) USING BTREE,
-                                                 INDEX `room_id`(`room_id`) USING BTREE,
-                                                 INDEX `order_no`(`order_no`) USING BTREE,
-                                                 INDEX `user_id`(`user_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '商品购买订单表' ROW_FORMAT = DYNAMIC;
+ALTER TABLE `member_face_blacklist` MODIFY COLUMN `photo_data` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '照片 base64编码' AFTER `photo_url`;
 
-ALTER TABLE `member_room_info` ADD COLUMN `svg_x` int NULL DEFAULT NULL COMMENT 'svg x轴坐标' AFTER `status`;
+ALTER TABLE `member_face_record` MODIFY COLUMN `photo_data` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '照片 base64编码' AFTER `photo_url`;
 
-ALTER TABLE `member_room_info` ADD COLUMN `svg_y` int NULL DEFAULT NULL COMMENT 'svg y轴坐标' AFTER `svg_x`;
 
-ALTER TABLE `member_store_info` ADD COLUMN `svg` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT 'svg代码' AFTER `expire_time`;
-
-ALTER TABLE `yshop_store_product_category` MODIFY COLUMN `pic_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '分类图片' AFTER `name`;
-
-DROP TABLE `product_order`;
 
 SET FOREIGN_KEY_CHECKS=1;
