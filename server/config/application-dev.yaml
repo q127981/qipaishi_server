@@ -11,13 +11,13 @@ spring:
   datasource:
     druid: # Druid 【监控】相关的全局配置
       web-stat-filter:
-        enabled: true
+        enabled: false
       stat-view-servlet:
-        enabled: true
+        enabled: false
         allow: # 设置白名单，不填则允许所有访问
         url-pattern: /druid/*
-        login-username: # 控制台管理用户名和密码
-        login-password:
+        login-username: mazongjian
+        login-password: zx15611sd++
       filter:
         stat:
           enabled: true
