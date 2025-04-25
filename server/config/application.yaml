@@ -154,6 +154,7 @@ mazongjian:
       - member_pay_order
       - member_store_meituan_info
       - member_store_wxpay_config
+      - member_store_template
   sms-code: # 短信验证码相关的配置项
     expire-times: 10m
     send-frequency: 1m
