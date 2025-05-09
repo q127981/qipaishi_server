@@ -4,7 +4,9 @@
 #### 配套小程序端已开源 仓库地址：
 ##### Bitbucket: https://bitbucket.org/scyanzu/24h_qipaishi
 ##### Github: https://github.com/q127981/24h_qipaishi.git
+##### 服务端部署文件因为体积太大，所以在网盘下载，地址见上面网盘下载地址
 #### 完整部署视频教程及文档: https://bitbucket.org/scyanzu/jiaocheng
+
 
 ## 项目说明
 #### 开发语言为Java8 Spingboot框架，后台管理系统是vue开发，前后端分离。
