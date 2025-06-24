@@ -13,6 +13,6 @@ system_menu
 system_role_menu
 system_tenant_package
 member_store_template
-
+member_holiday
 
 其他表同步结构即可

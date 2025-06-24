@@ -4,8 +4,12 @@
 #### 配套小程序端已开源 仓库地址：
 ##### Bitbucket: https://bitbucket.org/scyanzu/24h_qipaishi
 ##### Github: https://github.com/q127981/24h_qipaishi.git
-##### 服务端部署文件因为体积太大，所以在网盘下载，地址见上面网盘下载地址
-#### 完整部署视频教程及文档: https://bitbucket.org/scyanzu/jiaocheng
+##### 配套的服务端：
+
+百度网盘：https://pan.baidu.com/s/1k3xbcoSyZEJ4O62kHRyiDw?pwd=x1vi 提取码: x1vi
+
+注意：本版本更新必须按照新部署教程，否则系统将无法使用！！！！
+首次搭建视频教程：https://www.bilibili.com/video/BV1wgKaztEnD
 
 
 ## 项目说明
