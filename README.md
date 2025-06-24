@@ -30,11 +30,11 @@
 
 | biu                                                       | biu                                               | biu                                                        |
 |-----------------------------------------------------------|---------------------------------------------------|------------------------------------------------------------|
-| <img src=".image/1.门店列表.jpg" alt="Logo" width="260" /> | <img src=".image/2.模板1.jpg" alt="Logo" width="260" />| <img src=".image/6.模板5.jpg" alt="Logo" width="260" />| 
-| <img src=".image/3.模板2.jpg" alt="Logo" width="260" />  | <img src=".image/4.模板3.jpg" alt="Logo" width="260" />| <img src=".image/5.模板4.jpg" alt="Logo" width="260" />| 
-| <img src=".image/7.更换模板.jpg" alt="Logo" width="260" /> | <img src=".image/8.门店首页.jpg" alt="Logo" width="260" />| <img src=".image/10.提交订单.jpg" alt="Logo" width="260" />| 
-| <img src=".image/11.个人中心.jpg" alt="Logo" width="260" /> | <img src=".image/9.门店管理.jpg" alt="Logo" width="260" />| <img src=".image/15.订单详情.jpg" alt="Logo" width="260" />| 
-| <img src=".image/12.我的订单.jpg" alt="Logo" width="260" /> | <img src=".image/13.充值优惠.jpg" alt="Logo" width="260" />| <img src=".image/14.团购兑换.jpg" alt="Logo" width="260" />| 
+| <img src=".image/1.门店列表.jpg" alt="Logo" width="220" /> | <img src=".image/2.模板1.jpg" alt="Logo" width="220" />| <img src=".image/6.模板5.jpg" alt="Logo" width="220" />| 
+| <img src=".image/3.模板2.jpg" alt="Logo" width="220" />  | <img src=".image/4.模板3.jpg" alt="Logo" width="220" />| <img src=".image/5.模板4.jpg" alt="Logo" width="220" />| 
+| <img src=".image/7.更换模板.jpg" alt="Logo" width="220" /> | <img src=".image/8.门店首页.jpg" alt="Logo" width="220" />| <img src=".image/10.提交订单.jpg" alt="Logo" width="220" />| 
+| <img src=".image/11.个人中心.jpg" alt="Logo" width="220" /> | <img src=".image/9.门店管理.jpg" alt="Logo" width="220" />| <img src=".image/15.订单详情.jpg" alt="Logo" width="220" />| 
+| <img src=".image/12.我的订单.jpg" alt="Logo" width="220" /> | <img src=".image/13.充值优惠.jpg" alt="Logo" width="220" />| <img src=".image/14.团购兑换.jpg" alt="Logo" width="220" />| 
 ## 完整功能清单
 <img src=".image/功能清单.jpg" alt="Logo" width="650" />
 
