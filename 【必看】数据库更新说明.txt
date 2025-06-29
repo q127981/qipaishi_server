@@ -10,7 +10,6 @@
 system_dict_data
 system_dict_type
 system_menu
-system_role_menu
 system_tenant_package
 member_store_template
 member_holiday
